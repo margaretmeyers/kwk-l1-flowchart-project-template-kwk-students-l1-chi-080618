@@ -29,31 +29,33 @@ class ApplicationController < Sinatra::Base
     else
       return "wrong page"
     end
+    
   end
   
  
   
   post '/chicago_quiz' do
     activity = params[:activity]
-    if activity == "Workout"
+    
+    if activity == "workout"
       return erb :chicago_workout
       
-    elsif activity == "Eat breakfast"
+    elsif activity == "breakfast"
       return erb :chicago_breakfast
       
-    elsif activity == "Go shopping"
+    elsif activity == "shopping"
       return erb :chicago_shopping
     
-    elsif activity == "Eat lunch"
+    elsif activity == "lunch"
       return erb :chicago_lunch
     
-    elsif activity == "Visit a local landmark"
+    elsif activity == "landmark"
       return erb :chicago_landmark
     
-    elsif activity == "Find entertainment"
+    elsif activity == "entertainment"
       return erb :chicago_entertainment 
     
-    elsif activity == "Eat dinner and dessert"
+    elsif activity == "dinner"
       return erb == :chciago_dinner
       
     else 
