@@ -14,37 +14,20 @@ class ApplicationController < Sinatra::Base
   post '/result' do
     
     city = params[:city]
-    
+ 
     if city == "Chicago"
       return erb :chicago
-    else
-      return "wrong page"
-    end
     
-    
-     if city == "Chicago"
-      return erb :chicago
-    else
-      return "wrong page"
-    end
-    
-     if city == "Detroit"
+    elsif city == "Detroit"
       return erb :detroit
-    else
-      return "wrong page"
-    end
-    
-      if city == "Milwaukee"
+
+    elsif city == "Milwaukee"
       return erb :milwaukee
-    else
-      return "wrong page"
-    end
     
-     if city == "St. Louis"
+    elsif city == "St. Louis"
       return erb :stlouis
     else
       return "wrong page"
-    end
-  
-
+    end 
+  end
 end
