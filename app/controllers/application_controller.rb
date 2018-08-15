@@ -32,7 +32,26 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/chicago_quiz' do
-    if 
+    if activity == "Workout"
+      return erb :chicago_workout
+      
+    elsif activity == "Eat breakfast"
+      return erb :chicago_breakfast
+      
+    elsif activity == "Go shopping"
+      return erb :chicago_shopping
+    
+    elsif activity == "Eat lunch"
+      return erb :chicago_lunch
+    
+    elsif activity == "Visit a local landmark"
+      return erb :chicago_landmark
+    
+    elsif activity == "Find entertainment"
+      return erb :chicago_entertainment 
+    
+    elsif activity == "Eat dinner and dessert"
+      return erb == :chciago_dinner
+    end 
   end
-  
 end
