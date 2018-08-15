@@ -28,6 +28,11 @@ class ApplicationController < Sinatra::Base
       return erb :stlouis
     else
       return "wrong page"
-    end 
+    end
   end
+  
+  post '/chicago_quiz' do
+    if 
+  end
+  
 end
