@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
  
     if city == "Chicago"
       return erb :chicago
-    
+      
     elsif city == "Detroit"
       return erb :detroit
 
@@ -31,7 +31,10 @@ class ApplicationController < Sinatra::Base
     end
   end
   
+ 
+  
   post '/chicago_quiz' do
+    activity = params[:activity]
     if activity == "Workout"
       return erb :chicago_workout
       
@@ -52,6 +55,9 @@ class ApplicationController < Sinatra::Base
     
     elsif activity == "Eat dinner and dessert"
       return erb == :chciago_dinner
+      
+    else 
+      return "wrong page"
     end 
   end
 end
