@@ -34,7 +34,26 @@ class ApplicationController < Sinatra::Base
     end
   end
  
-  post '/result' do
+ post '/eastcoast_result' do
+    
+    city = params[:city]
+ 
+    if city == "Boston"
+      return erb :boston
+      
+    elsif city == "NYC"
+      return erb :nyc
+
+    elsif city == "Philladelphia"
+      return erb :philladelphia
+    
+    else
+      return "wrong page"
+    end
+  end
+ 
+ 
+  post '/midwest_result' do
     
     city = params[:city]
  
@@ -57,6 +76,97 @@ class ApplicationController < Sinatra::Base
  
   
   post '/chicago_quiz' do
+    activity = params[:activity]
+    
+    if activity == "workout"
+      return erb :chicago_workout
+      
+    elsif activity == "breakfast"
+      return erb :chicago_breakfast
+      
+    elsif activity == "shopping"
+      return erb :chicago_shopping
+    
+    elsif activity == "lunch"
+      return erb :chicago_lunch
+    
+    elsif activity == "landmark"
+      return erb :chicago_landmark
+    
+    elsif activity == "entertainment"
+      return erb :chicago_entertainment 
+    
+    elsif activity == "dinner"
+      return erb == :chicago_dinner
+      
+    else 
+      return "wrong page"
+    end 
+  end
+  
+  
+   post '/boston_quiz' do
+    activity = params[:activity]
+    
+    if activity == "workout"
+      return erb :boston_workout
+      
+    elsif activity == "breakfast"
+      return erb :boston_breakfast
+      
+    elsif activity == "shopping"
+      return erb :boston_shopping
+    
+    elsif activity == "lunch"
+      return erb :boston_lunch
+    
+    elsif activity == "landmark"
+      return erb :boston_landmark
+    
+    elsif activity == "entertainment"
+      return erb :boston_entertainment 
+    
+    elsif activity == "dinner"
+      return erb == :boston_dinner
+      
+    else 
+      return "wrong page"
+    end 
+  end
+  
+  
+   post '/charlotte_quiz' do
+    activity = params[:activity]
+    
+    if activity == "workout"
+      return erb :charlotte_workout
+      
+    elsif activity == "breakfast"
+      return erb :charlotte_breakfast
+      
+    elsif activity == "shopping"
+      return erb :charlotte_shopping
+    
+    elsif activity == "lunch"
+      return erb :charlotte_lunch
+    
+    elsif activity == "landmark"
+      return erb :charlotte_landmark
+    
+    elsif activity == "entertainment"
+      return erb :charlotte_entertainment 
+    
+    elsif activity == "dinner"
+      return erb == :charlotte_dinner
+      
+    else 
+      return "wrong page"
+    end 
+  end
+  
+  
+  
+   post '/chicago_quiz' do
     activity = params[:activity]
     
     if activity == "workout"
