@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
       return erb :eastcoast
     
     else
-      return "wrong_page"
+      return "wrong page"
     end
   end
  
