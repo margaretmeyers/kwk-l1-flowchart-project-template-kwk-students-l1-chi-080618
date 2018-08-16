@@ -135,29 +135,29 @@ class ApplicationController < Sinatra::Base
   end
   
   
-   post '/charlotte_quiz' do
+   post '/philladelphia_quiz' do
     activity = params[:activity]
     
     if activity == "workout"
-      return erb :charlotte_workout
+      return erb :philladelphia_workout
       
     elsif activity == "breakfast"
-      return erb :charlotte_breakfast
+      return erb :philladelphia_breakfast
       
     elsif activity == "shopping"
-      return erb :charlotte_shopping
+      return erb :philladelphia_shopping
     
     elsif activity == "lunch"
-      return erb :charlotte_lunch
+      return erb :philladelphia_lunch
     
     elsif activity == "landmark"
-      return erb :charlotte_landmark
+      return erb :philladelphia_landmark
     
     elsif activity == "entertainment"
-      return erb :charlotte_entertainment 
+      return erb :philladelphia_entertainment 
     
     elsif activity == "dinner"
-      return erb :charlotte_dinner
+      return erb :philladelphia_dinner
       
     else 
       return "wrong page"
