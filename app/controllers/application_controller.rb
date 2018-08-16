@@ -8,9 +8,32 @@ class ApplicationController < Sinatra::Base
   end
     
   get '/'do
-    erb :index
+    erb :region
   end
   
+  post '/region' do
+    
+    region = params[:region]
+ 
+    if region == "South"
+      return erb :south
+      
+    elsif region == "Southeast"
+      return erb :southeast
+
+    elsif region == "Midwest"
+      return erb :midwest
+    
+    elsif region == "Westcoast"
+      return erb :westcoast
+    
+    elsif region == "Eastcoast"
+      return erb :eastcoast
+    else
+      return "wrong page"
+    end
+  end
+ 
   post '/result' do
     
     city = params[:city]
@@ -29,8 +52,6 @@ class ApplicationController < Sinatra::Base
     else
       return "wrong page"
     end
-<<<<<<< HEAD
-    
   end
   
  
@@ -62,7 +83,5 @@ class ApplicationController < Sinatra::Base
     else 
       return "wrong page"
     end 
-=======
->>>>>>> c1ee76a39dc807d96c975f65643e98100bef9b87
   end
 end
