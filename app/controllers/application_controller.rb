@@ -97,7 +97,7 @@ class ApplicationController < Sinatra::Base
       return erb :chicago_entertainment 
     
     elsif activity == "dinner"
-      return erb == :chicago_dinner
+      return erb :chicago_dinner
       
     else 
       return "wrong page"
@@ -127,7 +127,7 @@ class ApplicationController < Sinatra::Base
       return erb :boston_entertainment 
     
     elsif activity == "dinner"
-      return erb == :boston_dinner
+      return erb :boston_dinner
       
     else 
       return "wrong page"
@@ -157,7 +157,7 @@ class ApplicationController < Sinatra::Base
       return erb :charlotte_entertainment 
     
     elsif activity == "dinner"
-      return erb == :charlotte_dinner
+      return erb :charlotte_dinner
       
     else 
       return "wrong page"
