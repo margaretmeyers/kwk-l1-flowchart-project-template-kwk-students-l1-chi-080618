@@ -29,6 +29,7 @@ class ApplicationController < Sinatra::Base
     else
       return "wrong page"
     end
+<<<<<<< HEAD
     
   end
   
@@ -61,5 +62,7 @@ class ApplicationController < Sinatra::Base
     else 
       return "wrong page"
     end 
+=======
+>>>>>>> c1ee76a39dc807d96c975f65643e98100bef9b87
   end
 end
