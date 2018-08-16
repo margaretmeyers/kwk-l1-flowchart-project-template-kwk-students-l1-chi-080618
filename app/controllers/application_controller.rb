@@ -186,7 +186,36 @@ class ApplicationController < Sinatra::Base
     
     elsif activity == "dinner"
       return erb :nyc_dinner
+  
+    else 
+      return "wrong page"
+    end 
+  end
+  
+     post '/detroit_quiz' do
+    activity = params[:activity]
+    
+    if activity == "workout"
+      return erb :detroit_workout
       
+    elsif activity == "breakfast"
+      return erb :detroit_breakfast
+      
+    elsif activity == "shopping"
+      return erb :detroit_shopping
+    
+    elsif activity == "lunch"
+      return erb :detroit_lunch
+    
+    elsif activity == "landmark"
+      return erb :detroit_landmark
+    
+    elsif activity == "entertainment"
+      return erb :detroit_entertainment 
+    
+    elsif activity == "dinner"
+      return erb :detroit_dinner
+  
     else 
       return "wrong page"
     end 
