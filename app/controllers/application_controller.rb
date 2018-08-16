@@ -16,9 +16,6 @@ class ApplicationController < Sinatra::Base
  
     if region == "South"
       return erb :south
-      
-    elsif region == "Southeast"
-      return erb :southeast
 
     elsif region == "Midwest"
       return erb :midwest
@@ -41,7 +38,7 @@ class ApplicationController < Sinatra::Base
     if city == "Boston"
       return erb :boston
       
-    elsif city == "NYC"
+    elsif city == "Nyc"
       return erb :nyc
 
     elsif city == "Philladelphia"
@@ -166,29 +163,29 @@ class ApplicationController < Sinatra::Base
   
   
   
-   post '/chicago_quiz' do
+   post '/nyc_quiz' do
     activity = params[:activity]
     
     if activity == "workout"
-      return erb :chicago_workout
+      return erb :nyc_workout
       
     elsif activity == "breakfast"
-      return erb :chicago_breakfast
+      return erb :nyc_breakfast
       
     elsif activity == "shopping"
-      return erb :chicago_shopping
+      return erb :nyc_shopping
     
     elsif activity == "lunch"
-      return erb :chicago_lunch
+      return erb :nyc_lunch
     
     elsif activity == "landmark"
-      return erb :chicago_landmark
+      return erb :nyc_landmark
     
     elsif activity == "entertainment"
-      return erb :chicago_entertainment 
+      return erb :nyc_entertainment 
     
     elsif activity == "dinner"
-      return erb == :chciago_dinner
+      return erb :nyc_dinner
       
     else 
       return "wrong page"
